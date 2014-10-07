@@ -1,12 +1,16 @@
 FROM ubuntu:trusty
 MAINTAINER dmcnamara
 
-# Update the OS
-RUN apt-get update
-RUN apt-get upgrade -y
-
 # Install
-RUN apt-get install -y git ruby1.9.1-full build-essential nginx uwsgi uwsgi-core supervisor nodejs
+RUN apt-get update && apt-get install -y \
+     git \
+     ruby1.9.1-full \
+     build-essential \
+     nginx \
+     uwsgi \
+     uwsgi-core \
+     supervisor \
+     nodejs
 
 RUN gem install --no-rdoc --no-ri jekyll
 
