@@ -1,3 +1,7 @@
+This is a fork from https://github.com/DonMcNamara/dockerfiles/tree/master/dockerjekyllpages which is built at https://hub.docker.com/r/dmcnamara/dockerjekyllpages/
+
+This repo is built at https://hub.docker.com/r/whitegecko/dockerjekyllpages/
+
 ### Description
 This is a docker image to run Jekyll against a git repository. This is essentially githubpages in a docker image. This docker image uses nginx, Jekyll, uwsgi and supervisor.
 
