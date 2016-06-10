@@ -1,10 +1,10 @@
-FROM ubuntu:trusty
+FROM ubuntu:xenial
 MAINTAINER dmcnamara
 
 # Install
 RUN apt-get update && apt-get install -y \
      git \
-     ruby1.9.1-full \
+     ruby-full \
      build-essential \
      nginx \
      uwsgi \
