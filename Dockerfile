@@ -2,6 +2,7 @@ FROM ubuntu:xenial
 MAINTAINER dmcnamara
 
 # Install
+## zlib1g-dev is needed for nokogiri dependency of jekyll-rdf
 RUN apt-get update && apt-get install -y \
      git \
      ruby-full \
@@ -10,9 +11,10 @@ RUN apt-get update && apt-get install -y \
      uwsgi \
      uwsgi-core \
      supervisor \
-     nodejs
+     nodejs \
+     zlib1g-dev
 
-RUN gem install --no-rdoc --no-ri jekyll
+RUN gem install --no-rdoc --no-ri jekyll bundler
 
 # Configure nginx.
 RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
