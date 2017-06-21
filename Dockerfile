@@ -1,5 +1,7 @@
 FROM ubuntu:xenial
-MAINTAINER dmcnamara
+MAINTAINER Natanael Arndt <arndtn@gmail.com>
+
+ENV LANG C.UTF-8
 
 # Install
 ## zlib1g-dev is needed for nokogiri dependency of jekyll-rdf
@@ -27,6 +29,8 @@ ADD ./supervisor-app.conf /etc/supervisor/conf.d/
 # Add the script used to kick off the jekyll build.
 ADD ./buildsite.sh /data/cgi/buildsite.sh
 RUN chmod +x /data/cgi/buildsite.sh
+
+VOLUME /data/jekyll/source
 
 EXPOSE 80
 CMD ["supervisord", "-n"]
