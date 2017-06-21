@@ -29,9 +29,8 @@ sudo docker run -p 8080:80 -e REPO=[YOUR REPO URL HERE] -e BRANCH=[YOUR BRANCH] 
 
 ### Release Notes
 
-#### 0.2 Some Improvements
-* Some improvements by white-gecko
-* Update baseimage, ruby and thus jekyll
+#### 0.2.0 Some Improvements
+* Update base image, ruby and thus jekyll
 * Reorganize file structure
 * NGINX: also serve pages without .html
 * NGINX: deliver 404 status codes
@@ -41,5 +40,5 @@ sudo docker run -p 8080:80 -e REPO=[YOUR REPO URL HERE] -e BRANCH=[YOUR BRANCH] 
 * Build process: build from volume
 * Update README
 
-#### 0.1 Initial release.
+#### 0.1.0 Initial release.
 * It seems to work.
