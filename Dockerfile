@@ -2,6 +2,7 @@ FROM ubuntu:xenial
 MAINTAINER Natanael Arndt <arndtn@gmail.com>
 
 ENV LANG C.UTF-8
+ENV SSH_AUTH_SOCK /var/run/ssh-agent.sock
 
 # Install
 ## zlib1g-dev is needed for nokogiri dependency of jekyll-rdf
