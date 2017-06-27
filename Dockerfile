@@ -15,7 +15,8 @@ RUN apt-get update && apt-get install -y \
      uwsgi-core \
      supervisor \
      nodejs \
-     zlib1g-dev
+     zlib1g-dev \
+     && rm -rf /var/lib/apt/lists/*
 
 RUN gem install --no-rdoc --no-ri jekyll bundler
 
