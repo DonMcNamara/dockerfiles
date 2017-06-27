@@ -38,6 +38,9 @@ sudo docker run -p 8080:80 -e REPO=[YOUR REPO URL HERE] -e BRANCH=[YOUR BRANCH] 
 
 ### Changelog
 
+#### 0.3.1
+* Remove apt list cache after installation with apt-get (should save some space)
+
 #### 0.3.0 Add Support for private SSH repositories
 * Set SSH_AUTH_SOCK environment variable per default
 * README: Explain how to forward the respective SSH resources to the container
