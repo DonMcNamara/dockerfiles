@@ -38,6 +38,10 @@ sudo docker run -p 8080:80 -e REPO=[YOUR REPO URL HERE] -e BRANCH=[YOUR BRANCH] 
 
 ### Changelog
 
+#### 0.3.2
+* Remove debian packages which are not used
+* Update base image to ubuntu:zesty, latest and saves space
+
 #### 0.3.1
 * Remove apt list cache after installation with apt-get (should save some space)
 

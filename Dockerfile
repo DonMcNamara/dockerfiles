@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:zesty
 MAINTAINER Natanael Arndt <arndtn@gmail.com>
 
 ENV LANG C.UTF-8
