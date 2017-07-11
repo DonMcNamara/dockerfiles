@@ -6,15 +6,15 @@ ENV SSH_AUTH_SOCK /var/run/ssh-agent.sock
 
 # Install
 ## zlib1g-dev is needed for nokogiri dependency of jekyll-rdf
+## ruby-dev and build-essential are needed to build jekyll
 RUN apt-get update && apt-get install -y \
      git \
-     ruby-full \
+     ruby \
+     ruby-dev \
      build-essential \
      nginx \
      uwsgi \
-     uwsgi-core \
      supervisor \
-     nodejs \
      zlib1g-dev \
      && rm -rf /var/lib/apt/lists/*
 
