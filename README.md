@@ -33,7 +33,7 @@ This is especially useful in combination with a proxy container e.g. the one fro
 
 If you want to serve you site locally you can map it e.g. to port 8080:
 ```
-sudo docker run -p 8080:80 -e REPO=[YOUR REPO URL HERE] -e BRANCH=[YOUR BRANCH] white-gecko/dockerjekyllpages
+sudo docker run -p 8080:80 -e REPO=[YOUR REPO URL HERE] -e BRANCH=[YOUR BRANCH] whitegecko/dockerjekyllpages
 ```
 
 ### Changelog
