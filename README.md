@@ -36,6 +36,23 @@ If you want to serve you site locally you can map it e.g. to port 8080:
 sudo docker run -p 8080:80 -e REPO=[YOUR REPO URL HERE] -e BRANCH=[YOUR BRANCH] whitegecko/dockerjekyllpages
 ```
 
+### Troubleshooting
+
+#### Authenticity can't be established
+
+If you experience that `./buildsite.sh` never ends and if you run it manually you get the following output:
+
+    The authenticity of host 'github.com (192.30.253.113)' can't be established.
+    RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+    Are you sure you want to continue connecting (yes/no)?
+
+You are using a ssh remote URL.
+
+There are two solutions:
+
+1. Use a HTTPS URL for the remote instead
+2. Include a `known_hosts`-file as explained above in the "Use SSH Authentication"-section
+
 ### Changelog
 
 #### 0.3.2
