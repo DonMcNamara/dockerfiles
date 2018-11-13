@@ -1,4 +1,4 @@
-FROM ubuntu:zesty
+FROM ubuntu:cosmic
 MAINTAINER Natanael Arndt <arndtn@gmail.com>
 
 ENV LANG C.UTF-8
