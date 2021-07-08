@@ -1,18 +1,24 @@
-FROM ubuntu:trusty
-MAINTAINER dmcnamara
+FROM ubuntu:cosmic
+MAINTAINER Natanael Arndt <arndtn@gmail.com>
+
+ENV LANG C.UTF-8
+ENV SSH_AUTH_SOCK /var/run/ssh-agent.sock
 
 # Install
+## zlib1g-dev is needed for nokogiri dependency of jekyll-rdf
+## ruby-dev and build-essential are needed to build jekyll
 RUN apt-get update && apt-get install -y \
      git \
-     ruby1.9.1-full \
+     ruby \
+     ruby-dev \
      build-essential \
      nginx \
      uwsgi \
-     uwsgi-core \
      supervisor \
-     nodejs
+     zlib1g-dev \
+     && rm -rf /var/lib/apt/lists/*
 
-RUN gem install --no-rdoc --no-ri jekyll
+RUN gem install --no-rdoc --no-ri jekyll bundler
 
 # Configure nginx.
 RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
@@ -25,6 +31,8 @@ ADD ./supervisor-app.conf /etc/supervisor/conf.d/
 # Add the script used to kick off the jekyll build.
 ADD ./buildsite.sh /data/cgi/buildsite.sh
 RUN chmod +x /data/cgi/buildsite.sh
+
+VOLUME /data/jekyll/source
 
 EXPOSE 80
 CMD ["supervisord", "-n"]
