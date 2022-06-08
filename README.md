@@ -1,3 +1,7 @@
+Maybe this is not state of the art anymore.
+Better build your page with some CI/CD system and then serve it as static site with: https://github.com/white-gecko/mini-server.compose
+
+
 This is a fork from https://github.com/DonMcNamara/dockerfiles/tree/master/dockerjekyllpages which is built at https://hub.docker.com/r/dmcnamara/dockerjekyllpages/
 
 This repo is built at https://hub.docker.com/r/whitegecko/dockerjekyllpages/
